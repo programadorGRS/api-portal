@@ -6,7 +6,7 @@ from ..database import Base
 class Funcionario(Base):
     __tablename__ = "funcionarios"
     
-    codigo = Column(Integer, primary_key=True, index=True)  # CODIGO será o ID primário
+    codigo = Column(Integer, primary_key=True, index=True)
     codigoempresa = Column(Integer, ForeignKey("empresas.codigo"), nullable=False)
     nomeempresa = Column(String(200))
     nome = Column(String(120), nullable=False)
@@ -19,7 +19,7 @@ class Funcionario(Base):
     cbocargo = Column(String(10))
     ccusto = Column(String(50))
     nomecentrocusto = Column(String(130))
-    matriculafuncionario = Column(String(30))
+    matriculafuncionario = Column(String(30), unique=True)
     cpf = Column(String(19))
     rg = Column(String(19))
     ufrg = Column(String(10))
@@ -68,3 +68,4 @@ class Funcionario(Base):
     # Relacionamentos
     empresa = relationship("Empresa", back_populates="funcionarios")
     convocacoes = relationship("Convocacao", back_populates="funcionario")
+    absenteismos = relationship("Absenteismo", back_populates="funcionario")

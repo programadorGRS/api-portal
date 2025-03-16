@@ -5,7 +5,7 @@ from slowapi.errors import RateLimitExceeded
 from slowapi.util import get_remote_address
 
 from .database import engine, Base
-from .routers import auth, usuarios, empresas, funcionarios, convocacoes
+from .routers import auth, usuarios, empresas, funcionarios, convocacoes, absenteismos
 
 # Criar todas as tabelas no banco de dados
 Base.metadata.create_all(bind=engine)
@@ -39,6 +39,7 @@ app.include_router(usuarios.router)
 app.include_router(empresas.router)
 app.include_router(funcionarios.router)
 app.include_router(convocacoes.router)
+app.include_router(absenteismos.router)
 
 @app.get("/")
 @limiter.limit("10/minute")

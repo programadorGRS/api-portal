@@ -3,3 +3,4 @@ from . import usuarios
 from . import empresas
 from . import funcionarios
 from . import convocacoes
+from . import absenteismos

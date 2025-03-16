@@ -2,6 +2,7 @@ from app.database import Base, engine
 from app.models.usuario import Usuario
 from app.models.empresa import Empresa
 from app.models.funcionario import Funcionario
+from app.models.convocacao import Convocacao
 
 def criar_tabelas():
     """Cria todas as tabelas no banco de dados"""
