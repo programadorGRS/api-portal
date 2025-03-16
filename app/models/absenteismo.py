@@ -8,7 +8,10 @@ class Absenteismo(Base):
     id = Column(Integer, primary_key=True, index=True)
     unidade = Column(String(130))
     setor = Column(String(130))
-    matricula_func = Column(String(30), ForeignKey("funcionarios.matriculafuncionario"))
+    # Usaremos uma coluna separada para matricula e relacionamento
+    matricula_func = Column(String(30))
+    # Adicionar a chave estrangeira para o ID do funcionário
+    funcionario_id = Column(Integer, ForeignKey("funcionarios.codigo"))
     dt_nascimento = Column(Date)
     sexo = Column(Integer)
     tipo_atestado = Column(Integer)
