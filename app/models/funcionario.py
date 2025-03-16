@@ -67,3 +67,4 @@ class Funcionario(Base):
     
     # Relacionamentos
     empresa = relationship("Empresa", back_populates="funcionarios")
+    convocacoes = relationship("Convocacao", back_populates="funcionario")

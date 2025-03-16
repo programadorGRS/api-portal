@@ -25,3 +25,4 @@ class Empresa(Base):
     # Relacionamentos
     usuarios = relationship("Usuario", secondary=usuario_empresa, back_populates="empresas")
     funcionarios = relationship("Funcionario", back_populates="empresa")
+    convocacoes = relationship("Convocacao", back_populates="empresa")
