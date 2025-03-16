@@ -1,0 +1,44 @@
+# Ambientes virtuais
+env/
+venv/
+ENV/
+.env
+
+# Arquivos de bytecode Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+
+# Distribuição e empacotamento
+dist/
+build/
+*.egg-info/
+
+# Logs e arquivos temporários
+*.log
+logs/
+tmp/
+.DS_Store
+
+# Arquivos de configuração de IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.ipynb_checkpoints/
+
+# Arquivos de banco de dados
+*.db
+*.sqlite3
+*.sqlite
+
+# Cobertura de código
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
